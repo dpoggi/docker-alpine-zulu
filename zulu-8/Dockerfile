@@ -1,6 +1,6 @@
 FROM frolvlad/alpine-glibc:alpine-3.5_glibc-2.25
 
-RUN ZULU_VERSION="8.20.0.5-jdk8.0.121" \
+RUN ZULU_VERSION="8.21.0.1-jdk8.0.131" \
  && ZULU_ARCHIVE_NAME="zulu${ZULU_VERSION}-linux_x64" \
  && apk update \
  && apk upgrade --no-cache \
