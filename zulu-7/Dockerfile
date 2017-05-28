@@ -21,6 +21,7 @@ RUN ZULU_VERSION="7.18.0.3-jdk7.0.141" \
            /opt/zulu/sample \
            /opt/zulu/src.zip \
  && echo 'export JAVA_HOME=/opt/zulu' > /etc/profile.d/zulu.sh \
+ && echo 'export PATH=$PATH:$JAVA_HOME/bin' >> /etc/profile.d/zulu.sh \
  && apk del .build-dependencies \
  && rm -f /var/cache/apk/*.tar.gz
 
