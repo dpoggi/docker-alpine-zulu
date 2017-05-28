@@ -1,4 +1,4 @@
-FROM frolvlad/alpine-glibc:alpine-3.5_glibc-2.25
+FROM frolvlad/alpine-glibc:alpine-3.6
 
 RUN ZULU_VERSION="7.18.0.3-jdk7.0.141" \
  && ZULU_ARCHIVE_NAME="zulu${ZULU_VERSION}-linux_x64" \

@@ -2,7 +2,7 @@
 
 ## About
 
-Based on `frolvlad/alpine-glibc:alpine-3.5_glibc-2.25`, adds Azul Systems' [Zulu](https://www.azul.com/products/zulu/) JDK (7 or 8).
+Based on `frolvlad/alpine-glibc:alpine-3.6`, adds Azul Systems' [Zulu](https://www.azul.com/products/zulu/) JDK (7 or 8).
 
 ## License
 
