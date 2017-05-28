@@ -2,8 +2,6 @@ FROM frolvlad/alpine-glibc:alpine-3.6
 
 RUN ZULU_VERSION="7.18.0.3-jdk7.0.141" \
  && ZULU_ARCHIVE_NAME="zulu${ZULU_VERSION}-linux_x64" \
- && apk update \
- && apk upgrade --no-cache \
  && apk add --no-cache \
             --virtual=.build-dependencies \
             ca-certificates \
@@ -30,8 +28,7 @@ RUN ZULU_VERSION="7.18.0.3-jdk7.0.141" \
  && rmdir /opt/zulu/jre \
  && echo 'export JAVA_HOME=/opt/zulu' > /etc/profile.d/zulu.sh \
  && echo 'export PATH=$PATH:$JAVA_HOME/bin' >> /etc/profile.d/zulu.sh \
- && apk del .build-dependencies \
- && rm -f /var/cache/apk/*.tar.gz
+ && apk del .build-dependencies
 
 ENV JAVA_HOME /opt/zulu
 ENV PATH ${PATH}:${JAVA_HOME}/bin
